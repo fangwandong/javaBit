@@ -1,9 +1,9 @@
 - [前言](#--)
   * [日志格式汇总](#日志格式汇总)
-  * [1、排除Logback依赖](#1、排除Logback依赖)
-  * [2、引入Log4j2依赖](#2、引入Log4j2依赖)
-  * [3、配置Log4j2](#3、配置Log4j2)
-  * [4、调用Logger输出日志](#4、调用Logger输出日志)
+  * [排除Logback依赖](#排除Logback依赖)
+  * [引入Log4j2依赖](#引入Log4j2依赖)
+  * [配置Log4j2](#配置Log4j2)
+  * [调用Logger输出日志](#调用Logger输出日志)
   * [全量异步日志配置](#全量异步日志配置)
   * [异步log4j2中location信息打印问题](#异步log4j2中location信息打印问题)
   * [审计日志](#审计日志)
@@ -19,7 +19,7 @@
 |Async Appender | 异步打印日志，内部采用ArrayBlockingQueue, 对每个AsyncAppender创建一个线程用于处理日志输出。|
 |Async Logger| 异步打印日志，采用了高性能并发框架Disruptor，创建一个线程用于处理日志输出。| 
 
-## 1、排除Logback依赖
+## 排除Logback依赖
 - Spring Boot 2.x默认使用Logback日志框架，要使用 Log4j2必须先排除 Logback。
 
 ```xml
@@ -37,7 +37,7 @@
 
 ```
 
-## 2、引入Log4j2依赖
+## 引入Log4j2依赖
 
 ```xml
 <!--配置异步日志提高性能 依赖-->
@@ -54,7 +54,7 @@
 </dependency>
 ```
 
-## 3、配置Log4j2
+## 配置Log4j2
 - 创建log4j2.xml文件，放在工程resources目录里。
 - 下面是一份比较详细的 log4j2 配置文件, 只需要修改 LOG_HOME、 LOG_FILE_NAME 成自己的路径即可。
 
@@ -134,7 +134,7 @@
 
 ```
 
-## 4、调用Logger输出日志
+## 调用Logger输出日志
 - 下面的示例代码使用了神器lombok中的@Slf4j 注解可以很方便的使用 org.slf4j.Logger 对象。日常开发尽量使用Slf4j门面来处理日志，尽量避免使用具体的日志框架。
 
 ```java
