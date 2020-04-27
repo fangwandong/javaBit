@@ -1,8 +1,9 @@
 # 前言
 >log4j2是log4j的升级版，并提供了许多logback改进的地方。
 ## 1、排除Logback依赖
-Spring Boot 2.x默认使用Logback日志框架，要使用 Log4j2必须先排除 Logback。
-```bash
+- Spring Boot 2.x默认使用Logback日志框架，要使用 Log4j2必须先排除 Logback。
+
+```java
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter</artifactId>
@@ -19,7 +20,7 @@ Spring Boot 2.x默认使用Logback日志框架，要使用 Log4j2必须先排除
 
 ## 2、引入Log4j2依赖
 
-```bash
+```java
 <!--log4j2 依赖-->
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -28,10 +29,10 @@ Spring Boot 2.x默认使用Logback日志框架，要使用 Log4j2必须先排除
 ```
 
 ## 3、配置Log4j2
-创建log4j2.xml文件，放在工程resources目录里。下面是一份比较详细的 log4j2 配置文件 ：
-只需要修改 LOG_HOME、 LOG_FILE_NAME 成自己的路径即可。
+- 创建log4j2.xml文件，放在工程resources目录里。
+- 下面是一份比较详细的 log4j2 配置文件, 只需要修改 LOG_HOME、 LOG_FILE_NAME 成自己的路径即可。
 
-```bash
+```java
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
@@ -108,9 +109,9 @@ Spring Boot 2.x默认使用Logback日志框架，要使用 Log4j2必须先排除
 ```
 
 ## 4、调用Logger输出日志
-下面的示例代码使用了神器lombok中的@Slf4j 注解可以很方便的使用 org.slf4j.Logger 对象。日常开发尽量使用Slf4j门面来处理日志，尽量避免使用具体的日志框架。
+- 下面的示例代码使用了神器lombok中的@Slf4j 注解可以很方便的使用 org.slf4j.Logger 对象。日常开发尽量使用Slf4j门面来处理日志，尽量避免使用具体的日志框架。
 
-```bash
+```java
 
 package com.xxx.water.web.controller;
 
@@ -158,7 +159,7 @@ public class StringBuilderController {
 ## 其他
 在webApplication配置Log4j2异步日志，提高性能
 
-```bash
+```java
 
     /**
      * Log4j2日志异步配置
