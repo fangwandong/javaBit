@@ -21,6 +21,13 @@
 ## 2、引入Log4j2依赖
 
 ```java
+<!--配置异步日志提高性能 依赖-->
+<dependency>
+    <groupId>com.lmax</groupId>
+    <artifactId>disruptor</artifactId>
+    <version>3.3.7</version>
+</dependency>
+
 <!--log4j2 依赖-->
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -157,7 +164,8 @@ public class StringBuilderController {
 ```
 
 ## 其他
-在webApplication配置Log4j2异步日志，提高性能
+- 在第二步新增了 disruptor 依赖之后，新增异步日志提高性能，日志少了很多。 todo
+- 在webApplication配置Log4j2异步日志，提高性能
 
 ```java
 
