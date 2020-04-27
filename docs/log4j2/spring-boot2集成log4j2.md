@@ -1,5 +1,13 @@
 # 前言
 >log4j2是log4j的升级版，并提供了许多logback改进的地方。
+## 日志格式汇总
+
+| 日志类型 | 描述  | 
+| :---- | :---- |
+|sync|同步打印日志，日志输出与业务逻辑在同一线程内，当日志输出完毕，才能进行后续业务逻辑操作|
+|Async Appender | 异步打印日志，内部采用ArrayBlockingQueue, 对每个AsyncAppender创建一个线程用于处理日志输出。|
+|Async Logger| 异步打印日志，采用了高性能并发框架Disruptor，创建一个线程用于处理日志输出。| 
+
 ## 1、排除Logback依赖
 - Spring Boot 2.x默认使用Logback日志框架，要使用 Log4j2必须先排除 Logback。
 
