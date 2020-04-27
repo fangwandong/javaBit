@@ -11,7 +11,7 @@
 ## 1、排除Logback依赖
 - Spring Boot 2.x默认使用Logback日志框架，要使用 Log4j2必须先排除 Logback。
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter</artifactId>
@@ -28,7 +28,7 @@
 
 ## 2、引入Log4j2依赖
 
-```java
+```xml
 <!--配置异步日志提高性能 依赖-->
 <dependency>
     <groupId>com.lmax</groupId>
@@ -47,7 +47,7 @@
 - 创建log4j2.xml文件，放在工程resources目录里。
 - 下面是一份比较详细的 log4j2 配置文件, 只需要修改 LOG_HOME、 LOG_FILE_NAME 成自己的路径即可。
 
-```java
+```xml
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
@@ -171,8 +171,8 @@ public class StringBuilderController {
 
 ```
 
-## 其他
-- 在第二步新增了 disruptor 依赖之后，新增异步日志提高性能，日志少了很多。 todo
+## 全量异步日志配置 
+- 在第二步新增了 disruptor 依赖之后，新增异步日志提高性能。
 - 在webApplication配置Log4j2异步日志，提高性能
 
 ```java
@@ -184,5 +184,54 @@ public class StringBuilderController {
         System.setProperty("Log4jContextSelector",
                 "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");
     }
+
+```
+
+## 异步log4j2中location信息打印问题
+- 全量异步日志，不支持 位置信息
+- 位置信息包括： 或者表达式%C或%class、%F或%file、%l或%location、%L或%line、%M或%method
+- 解决办法： 新增 includeLocation="true"
+- 其他解决办法： 手动写本地日志
+- 缺点： log4j2将会获取堆栈的快照（snapshot），并遍历堆栈跟踪以查找位置信息，因此会消耗较多的时间。
+  比同步logger慢1.3到5倍，同步日志记录器在获取堆栈快照之前会等待尽可能长的时间，如果不需要位置,那么快照将永远不会被捕获。
+
+```xml
+
+<Root level="info" includeLocation="true">
+  <AppenderRef ref="RandomAccessFile"/>
+</Root>
+
+```
+
+## 审计日志
+- 如果必须要本地审计日志，可以采取同步异步混合
+- 官方给出了一个混合异步的配置例子：
+```xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- No need to set system property "log4j2.contextSelector" to any value
+    when using <asyncLogger> or <asyncRoot>. -->
+
+<Configuration status="WARN">
+ <Appenders>
+   <!-- Async Loggers will auto-flush in batches, so switch off immediateFlush. -->
+   <RandomAccessFile name="RandomAccessFile" fileName="asyncWithLocation.log"
+             immediateFlush="false" append="false">
+     <PatternLayout>
+       <Pattern>%d %p %class{1.} [%t] %location %m %ex%n</Pattern>
+     </PatternLayout>
+   </RandomAccessFile>
+ </Appenders>
+ <Loggers>
+   <!-- pattern layout actually uses location, so we need to include it -->
+   <AsyncLogger name="com.foo.Bar" level="trace" includeLocation="true">
+     <AppenderRef ref="RandomAccessFile"/>
+   </AsyncLogger>
+   <Root level="info" includeLocation="true">
+     <AppenderRef ref="RandomAccessFile"/>
+   </Root>
+ </Loggers>
+</Configuration>
 
 ```
