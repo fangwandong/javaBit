@@ -1,0 +1,62 @@
+{
+  "settings": {
+    "index": {
+      "number_of_shards": "4",
+      "number_of_replicas": "1"
+    }
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+        "clientip": {
+          "type": "keyword"
+        },
+        "ident": {
+          "type": "keyword"
+        },
+        "auth": {
+          "type": "keyword"
+        },
+        "logdate": {
+          "type" : "keyword"
+        },
+        "http_x_forwarded_for": {
+          "type": "keyword"
+        },
+        "http_j_forwarded_for": {
+          "type": "keyword"
+        },
+        "method": {
+          "type": "keyword"
+        },
+        "request": {
+          "type": "keyword"
+        },
+        "httpversion": {
+          "type": "keyword"
+        },
+        "response": {
+          "type": "keyword"
+        },
+        "bytes": {
+          "type": "keyword"
+        },        
+        "referrer": {
+          "type": "keyword"
+        },
+        "agent": {
+          "type": "keyword"
+        },
+        "gzip_ratio": {
+          "type": "keyword"
+        },
+        "host_name": {
+          "type": "text"
+        },
+        "http_x_original_to": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
