@@ -24,7 +24,7 @@
 
 
 #### GIT
-1. **[git命令](docs/git命令/git命令.md)**
+1. **[git命令](docs/git/git命令.md)**
 
 #### node
 1. **[node基础](docs/node/node基础.md)**
