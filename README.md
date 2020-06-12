@@ -30,11 +30,11 @@
 1. **[node基础](docs/node/node基础.md)**
 
 #### NGINX
-1. **[nginx](docs/node/nginx.md)**
+1. **[nginx](docs/nginx/nginx.md)**
 
 
 #### thymeleaf
-1. **[thymeleaf](docs/node/thymeleaf.md)**
+1. **[thymeleaf](docs/thymeleaf/thymeleaf.md)**
 
 
 #### 带圈数字
