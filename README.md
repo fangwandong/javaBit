@@ -4,6 +4,8 @@
       - [ELK](#elk)
       - [GIT](#git)
       - [node](#node)
+      - [NGINX](#NGINX)
+      - [thymeleaf](#thymeleaf)
 
 
 # 前言
@@ -26,6 +28,13 @@
 
 #### node
 1. **[node基础](docs/node/node基础.md)**
+
+#### NGINX
+1. **[nginx](docs/node/nginx.md)**
+
+
+#### thymeleaf
+1. **[thymeleaf](docs/node/thymeleaf.md)**
 
 
 #### 带圈数字
