@@ -14,7 +14,8 @@
 
 #### Java基础
 1. **[java基础](docs/java/java基础.md)**
-2. **[spring](docs/java/spring.md)**
+2. **[spring基础](docs/java/spring基础.md)**
+3. **[spring基础Ioc_DI](docs/java/spring基础Ioc_DI.md)**
 
 
 #### spring-boot
