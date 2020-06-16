@@ -13,10 +13,10 @@
 
 
 #### Java基础
-1. **[java基础](docs/java/java基础.md)**
-2. **[spring基础](docs/java/spring基础.md)**
-3. **[spring基础Ioc_DI](docs/java/spring基础Ioc_DI.md)**
-
+1. **[java_base](docs/java/java_base.md)**
+2. **[spring_base](docs/java/spring_base.md)**
+3. **[spring_Ioc_DI](docs/java/spring_Ioc_DI.md)**
+4. **[spring_JDBC](docs/java/spring_JDBC.md)**
 
 #### spring-boot
 1. **[spring-boot2集成log4j2](docs/log4j2/spring-boot2集成log4j2.md)**

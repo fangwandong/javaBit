@@ -1,5 +1,5 @@
 # 前言
->对spring整理，spring框架介绍、spring原理、spring使用，文章都是实际操作所写，绝非水文。
+>对spring基础整理，spring框架介绍、spring原理、spring使用，文章都是实际操作所写，绝非水文。
 
 ## spring框架 
 
