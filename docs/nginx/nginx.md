@@ -305,3 +305,5 @@ hello, echo!
 - 当然， echo-nginx-module 模块不仅仅是提供echo这么简单的指令，还有其它的指令，
 - 详见：https://github.com/openresty/echo-nginx-module#content-handler-directives
 - echo模块参考： https://www.cnblogs.com/52fhy/p/10166333.html
+- 后续更新，nginx限流原理，nginx源码解析
+- 限流参考： https://www.cnblogs.com/biglittleant/p/8979915.html

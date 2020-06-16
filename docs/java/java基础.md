@@ -130,3 +130,6 @@ public class TestStatic {
 - demo
 
 ![](./../../img/java/danli.png)
+
+
+## 包装类型和基本类型区别
