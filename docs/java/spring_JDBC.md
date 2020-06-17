@@ -1,17 +1,17 @@
 
 - [前言](#前言)
-  * [Spring JDBC](#spring jdbc)
-  * [Spring JDBCTemplate](#spring JDBCTemplate)
+  * [SpringJDBC](#SpringJDBC)
+  * [SpringJDBCTemplate](#SpringJDBCTemplate)
   * [Spring和JDBC整合](#Spring和JDBC整合)
   * [Spring操作数据库(JDBCTemplate)](#Spring操作数据库(JDBCTemplate))
 
 # 前言
 > 主要记录Spring框架相关 Spring JDBC和 Spring JDBCTemplate，以及相关的实操代码。
 
-## Spring JDBC
+## SpringJDBC
 - JDBC: Java Database Connectivity: java数据库连接
 
-## Spring JDBCTemplate
+## SpringJDBCTemplate
 
 - JDBCTemplate： JDBC提供操作数据库的工具类
 
@@ -211,7 +211,7 @@ public class SpringJdbcRun {
 
 ```
 
-**⑦ 数据库建表语句 **
+**⑦ 数据库建表语句**
 
 ```Mysql
 
