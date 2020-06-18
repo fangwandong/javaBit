@@ -17,6 +17,8 @@
 2. **[spring_base](docs/java/spring_base.md)**
 3. **[spring_Ioc_DI](docs/java/spring_Ioc_DI.md)**
 4. **[spring_JDBC](docs/java/spring_JDBC.md)**
+5. **[spring_proxy](docs/java/spring_proxy.md)**
+6. **[spring_aop](docs/java/spring_aop.md)**
 
 #### spring-boot
 1. **[spring-boot2集成log4j2](docs/log4j2/spring-boot2集成log4j2.md)**
