@@ -48,6 +48,16 @@
 #### framework
 1. **[framework](docs/framework/framework.md)**
 
+
+#### 多线程
+1. **[thread](docs/thread/thread.md)**
+
+
+### Gradle安装配置（Windows）
+1. **[gradle](docs/gradle/gradle.md)**
+
+
+
 #### 带圈数字
 
 1. 带圆圈的数字：
