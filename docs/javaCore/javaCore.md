@@ -52,9 +52,7 @@ public static void main(){
         String world = "world";
         String groupString = hello + world;
         System.out.printf(groupString);
-        https://
-
-out Helloworld
+        //out Helloworld
     }
 
 ```
@@ -67,9 +65,7 @@ out Helloworld
         String hello = "Hello";
         String sub = hello.substring(0, 4);
         System.out.printf(sub);
-        https://
-
-out Hell
+        //out Hell
     }
 
 ```
@@ -125,9 +121,7 @@ out Hell
 
 
 
-Unicode编码： http:https://
-
-www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html
+Unicode编码： https://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html
 =======================================================================================
 
 

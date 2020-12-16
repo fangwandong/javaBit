@@ -8,9 +8,7 @@
 
 ```xml
 
-    <!-- https:https://
-
-mvnrepository.com/artifact/org.mybatis/mybatis -->
+    <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
@@ -18,9 +16,7 @@ mvnrepository.com/artifact/org.mybatis/mybatis -->
     </dependency>
 
     <!--Mysql驱动-->
-    <!-- https:https://
-
-mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>

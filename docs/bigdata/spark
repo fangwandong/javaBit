@@ -1,0 +1,2 @@
+spark-submit --conf spark.sql.broadcastTimeout=800 --num-executors $1 --driver-memory 16G --executor-memory 8G --executor-cores 4 --class $2 ./hilbert.jd.com-jar-with-dependencies.jar $*
+
